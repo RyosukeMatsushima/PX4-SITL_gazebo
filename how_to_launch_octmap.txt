@@ -1,0 +1,11 @@
+roslaunch px4 posix_sitl.launch world:=$(pwd)/Tools/sitl_gazebo/worlds/warehouse.world
+
+roslaunch mavros px4.launch fcu_url:="udp://:14540@192.168.1.36:14557"
+
+rosrun tf static_transform_publisher 0 0 0 1.5707963268 0 1.5707963268 base_link_frd front_camera_link 100
+
+roslaunch octomap_server octomap_tracking_server.launch
+
+rviz
+
+referance https://docs.px4.io/master/en/simulation/gazebo_octomap.html
