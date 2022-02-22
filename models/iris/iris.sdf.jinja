@@ -994,5 +994,12 @@
       </axis>
     </joint>
 
+    <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+      <frameName>world</frameName>
+      <bodyName>base_link</bodyName>
+      <topicName>/gazebo/local_pose_trurh</topicName>
+      <updateRate>10.0</updateRate>
+    </plugin>
+
   </model>
 </sdf>
