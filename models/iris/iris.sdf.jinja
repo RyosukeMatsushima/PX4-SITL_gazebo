@@ -418,15 +418,6 @@
       <motorSpeedPubTopic>/motor_speed/3</motorSpeedPubTopic>
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
     </plugin>
-    <include>
-      <uri>model://gps</uri>
-      <pose>0.1 0 0 0 0 0</pose>
-      <name>gps0</name>
-    </include>
-    <joint name='gps0_joint' type='fixed'>
-      <child>gps0::link</child>
-      <parent>base_link</parent>
-    </joint>
     <plugin name='groundtruth_plugin' filename='libgazebo_groundtruth_plugin.so'>
       <robotNamespace/>
     </plugin>
